@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>جمعية رياض الخالدات</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gulzar&display=swap ">
+  <link rel="shortcut icon" href="./logo.jpg">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:'Gulzar',sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Section principale avec l’image de la chorale */
+    header {
+      position: relative;
+      height: 100vh;
+      background: url(./chorale.jpg) no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size:100px;;
+      color: white;
+      text-shadow: 0 0 20px rgba(0,0,0,0.8);
+      transition: all 0.8s ease;
+    }
+
+    /* Effet lors du scroll */
+    body.scrolled header h1 {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2.5rem;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 20px;
+      border-radius: 15px;
+    }
+
+    /* Section avec la jeune fille */
+    .section-fille {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #000;
+      padding: 80px 10%;
+    }
+
+    .section-fille img {
+      width: 40%;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    }
+
+    .section-fille p {
+      font-family:sans-serif;
+        width: 55%;
+      font-size: 1.3rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* Section avec le chanteur */
+    .section-homme {
+      background-image:url(./clesdenote.jpg) ;
+      text-align: center;
+      padding: 80px 10%;
+    }
+
+    .section-homme h2{
+    font-family: sans-serif;
+    }
+    .section-homme img {
+      width: 45%;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(80, 55, 55, 0.2);
+    }
+
+    .section-homme a {
+      font-family: sans-serif;
+      display: flexbox;
+      margin-top: 25px;
+      background-color: darkslategray;
+      color: beige;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 1.2rem;
+      transition: 0.3s;
+    }
+
+    .section-homme a:hover {
+      background: darkred;
+    }
+
+    /* Section contact + maps */
+    footer {
+      background: #000;
+      padding: 0;
+      text-align: center;
+    }
+
+    footer iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+
+    footer p {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background: #111;
+      padding: 20px;
+      font-size: 1.3rem;
+    }
+
+    @media (max-width: 800px) {
+      .section-fille {
+        flex-direction: column;
+      }
+      .section-fille img, .section-fille p {
+        width: 100%;
+      }
+      .section-homme img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>جمعية رياض الخالدات</h1>
+  </header>
+
+  <section class="section-fille">
+    <img src="./ines.jpg" alt="Jeune fille chantant">
+    <p>
+      Découvrez les mystères de la musique classique aux côtés de nos élèves passionnés, véritables explorateurs du son et de l’émotion.
+      Ensemble, nous plongeons dans l'univers des grands compositeurs, où chaque note raconte une histoire et chaque mélodie éveille l’âme.
+      À travers concerts, ateliers et moments de partage, notre association vous invitent à un voyage intemporel, entre tradition et inspiration.
+      Laissez-vous emporter par la beauté, l’harmonie et la magie de la musique classique vécue avec le coeur.
+    </p>
+  </section>
+
+  <section class="section-homme">
+    <h2 style="font-size: 100px;" > Le maestro</h2>
+    <img src="./hicham.jpg" alt="Chanteur sur scène">
+    <br>
+    <a href="https://www.youtube.com/@hichamfawziidrissi2570" target="_blank">Découvrez le maestro @hichamfawziidrissi2570</a>
+  </section>
+
+  <footer>
+    <p>📞 Contactez-nous : 0613289141 Gmail: hichartiste@gmail.com</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.body.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+
+</body>
+</html>
